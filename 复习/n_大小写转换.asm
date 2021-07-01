@@ -7,7 +7,7 @@ DATAS SEGMENT
 DATAS ENDS
 
 STACKS SEGMENT
-    ;æ­¤å¤„è¾“å…¥å †æ ˆæ®µä»£ç 
+    ;´Ë´¦ÊäÈë¶ÑÕ»¶Î´úÂë
 STACKS ENDS
 
 CODES SEGMENT
@@ -19,13 +19,13 @@ START:
     lea dx,s1
     int 21h
     
-    mov ah,0ah;è¾“å…¥
+    mov ah,0ah;ÊäÈë
     lea  dx,buf
     int 21h
     
     lea si,buf+1
     xor cx,cx
-    mov cl,[si] ;èŽ·å–å­—ç¬¦ä¸ªæ•°
+    mov cl,[si] ;»ñÈ¡×Ö·û¸öÊý
     
 l1:
 	inc si

@@ -1,11 +1,11 @@
 DATAS SEGMENT
     SHU DB  02H,69H,6BH,45H,6CH,42H,68H  
-    COUNT EQU $-SHU;ä¸ªæ•°
+    COUNT EQU $-SHU;¸öÊý
     S DB 'THE MIN IS: $'
 DATAS ENDS
 
 STACKS SEGMENT
-    ;æ­¤å¤„è¾“å…¥å †æ ˆæ®µä»£ç 
+    ;´Ë´¦ÊäÈë¶ÑÕ»¶Î´úÂë
 STACKS ENDS
 
 CODES SEGMENT
@@ -19,7 +19,7 @@ START:
     
     MOV CX,COUNT-1
  	LEA SI,SHU
-    MOV AL,[SI];ç¬¬ä¸€ä¸ªæ•°
+    MOV AL,[SI];µÚÒ»¸öÊý
 COMPARE:
     CMP AL,[SI+1]
     JBE CONTINUE

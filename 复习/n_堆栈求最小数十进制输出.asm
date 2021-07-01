@@ -5,13 +5,13 @@ DATAS SEGMENT
 	D db 100,10
 	S db 'the min is:$'
 DATAS ENDS
-;0的ASCII码是30H,1的ACII码是31H,一直到9的ASCII码是39H,所以,数值0-9要显示在屏幕上,
-;就要变成它的ASCII码,加上30H就可以了.
+;0��ASCII����30H,1��ACII����31H,һֱ��9��ASCII����39H,����,��ֵ0-9Ҫ��ʾ����Ļ��,
+;��Ҫ�������ASCII��,����30H�Ϳ�����.
 
-;A的ASCII码是41H,十进制10对应十六进制的A, A H + 37 H =41H
-;B的ASCII码是42H,十进制11对应十六进制的B, B H + 37 H =42H
+;A��ASCII����41H,ʮ����10��Ӧʮ�����Ƶ�A, A H + 37 H =41H
+;B��ASCII����42H,ʮ����11��Ӧʮ�����Ƶ�B, B H + 37 H =42H
 
-;XCHG 交换
+;XCHG ����
 STACKS SEGMENT
     dw 100 dup(?)
 STACKS ENDS
@@ -42,7 +42,7 @@ XIAOYU:
 	
 judge:
 	cmp ax,0
-	jg judge2;为正数
+	jg judge2;Ϊ����
 	mov cx,0
 	sub cx,ax
 	mov dl,'-'
@@ -50,12 +50,12 @@ judge:
 	int 12h
 	mov ax,cx
 	
-judge2:;push ax 在判断跳转之前
-	idiv d;al百位,ah十位个位
+judge2:;push ax ���ж���ת֮ǰ
+	idiv d;al��λ,ahʮλ��λ
     push ax
 	cmp al,0
-	jz judge3;判断十位
-	mov bx,1;标志百位不为0
+	jz judge3;�ж�ʮλ
+	mov bx,1;��־��λ��Ϊ0
 	call outal
 
 judge3:
@@ -65,7 +65,7 @@ judge3:
 	idiv d+1
     push ax
 	cmp bx,1
-	jz outten;输出10位
+	jz outten;���10λ
 	cmp al,0
 	jz outah
 outten:

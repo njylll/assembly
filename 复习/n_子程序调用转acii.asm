@@ -5,7 +5,7 @@ DATAS SEGMENT
 DATAS ENDS
 
 STACKS SEGMENT
-    ;此处输入堆栈段代码
+    ;�˴������ջ�δ���
 STACKS ENDS
 
 CODES SEGMENT
@@ -20,7 +20,7 @@ START:
     int 10h
     int 21h
     
-    mov DL,A  ;每八位判断一次
+    mov DL,A  ;ÿ��λ�ж�һ��
     CALL PANDUAN
     MOV BX,B
     MOV DL,BL

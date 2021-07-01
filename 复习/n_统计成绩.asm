@@ -12,7 +12,7 @@ DATAS SEGMENT
 DATAS ENDS
 
 STACKS SEGMENT
-    ;此处输入堆栈段代码
+    ;�˴������ջ�δ���
 STACKS ENDS
 
 CODES SEGMENT
@@ -24,15 +24,15 @@ START:
 s:
 	mov al,[bx]
 	cmp al,-1
-	jz outt;判断完成,输出
+	jz outt;�ж����,���
 	
-	cmp al,90;统计优秀
+	cmp al,90;ͳ������
 	jae l1
 	cmp al,70
 	jae l2
-	cmp al,60;统计合格
+	cmp al,60;ͳ�ƺϸ�
 	jae l3
-	inc bjg ;统计不及格
+	inc bjg ;ͳ�Ʋ�����
 	inc bx
 	jmp s
 L1:

@@ -8,9 +8,9 @@ DATAS SEGMENT
     Z DW 51H
 DATAS ENDS
 STACKS SEGMENT
-    ;æ­¤å¤„è¾“å…¥å †æ ˆæ®µä»£ç 
+    ;´Ë´¦ÊäÈë¶ÑÕ»¶Î´úÂë
 STACKS ENDS
-;test ax,01 ä¸Žæ“ä½œåˆ¤æ–­å¥‡å¶
+;test ax,01 Óë²Ù×÷ÅÐ¶ÏÆæÅ¼
 CODES SEGMENT
     ASSUME CS:CODES,DS:DATAS,SS:STACKS
 START:
@@ -32,7 +32,7 @@ START:
     SAL BX,1
     ADD BX,CX
     SUB AX,BX
-    SAR AX,1 ;è¿ç®—å‡ºç»“æžœ
+    SAR AX,1 ;ÔËËã³ö½á¹û
     
     CMP AX,09H
     JBE L1
@@ -41,7 +41,7 @@ START:
     CMP AX,7EH
     JBE L3
     
-L1:;å°äºŽ9,+30h
+L1:;Ð¡ÓÚ9,+30h
 	ADD AX,30H
 	MOV DX,AX
 	MOV AH,02H
