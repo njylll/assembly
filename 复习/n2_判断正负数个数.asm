@@ -31,41 +31,39 @@ START:
 zz: 
     inc Z
     inc si 
-    loop compare
     jmp output
 pp:
     inc P
     inc si
-    loop compare
     jmp output
 
 MM:
     inc m
     inc si
-    loop compare
     jmp output
 
 output:
+    loop compare
      mov ah,09H
      lea dx,PLUS
      int 21H
      mov dl,P
      call out1
-     call endl;
+  
     
      mov ah,09H
      lea dx,min
      int 21H
      mov dl,m
      call out1
-     call endl
+
   
       mov ah,09H
      lea dx,zero
      int 21H
      mov dl,z
      call out1
-     call endl;
+
 
     MOV AH,4CH
     INT 21H
